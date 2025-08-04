@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: calc(100vh - 80px); /* Full height minus nav bar */
+}
+
+.card {
+  background: linear-gradient(145deg, #2c2c54, #21213f);
+  padding: 32px;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.establishment {
+  font-size: 1rem;
+  color: #a9a9d4;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+
+.instructions {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin-bottom: 24px;
+}
+
+.qrCodePlaceholder {
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  margin: 0 auto 24px auto;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.redeemButton {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 16px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.redeemButton:hover {
+  background-color: #45a049;
+}

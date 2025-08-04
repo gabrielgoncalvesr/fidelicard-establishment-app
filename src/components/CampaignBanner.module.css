@@ -1,0 +1,27 @@
+.banner {
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+  min-height: 150px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.textContainer {
+  max-width: 60%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.description {
+  font-size: 0.9rem;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}

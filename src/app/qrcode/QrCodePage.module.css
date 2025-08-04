@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: calc(100vh - 80px); /* Full height minus nav bar */
+  padding: 20px;
+  color: white;
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 80px;
+  color: #a9a9d4;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #a9a9d4;
+  max-width: 280px;
+  margin-bottom: 32px;
+}
+
+.scanButton {
+  padding: 14px 40px;
+  background-color: #fd6c55;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.scanButton:hover {
+  background-color: #e85a45;
+}

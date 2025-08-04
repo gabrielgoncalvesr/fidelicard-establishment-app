@@ -1,0 +1,180 @@
+.container {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 16px 16px 100px 16px; /* Padding at bottom for footer button */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.mainContent {
+  padding-top: 16px;
+}
+
+.card {
+  background-color: #2c2c3a;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  background-color: #444452;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.info {
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #b0b0c0;
+  margin: 4px 0 0 0;
+}
+
+.progressContainer {
+  margin-bottom: 20px;
+}
+
+.progressBar {
+  background-color: #444452;
+  border-radius: 8px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progressFill {
+  background-color: #ff6f61;
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.5s ease-in-out;
+}
+
+.progressLabel {
+  font-size: 0.75rem;
+  color: #b0b0c0;
+  text-align: right;
+  display: block;
+  margin-top: 8px;
+}
+
+.stampsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.stamp {
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  background-color: #444452;
+  transition: background-color 0.3s ease;
+}
+
+.stamp.filled {
+  background-color: #8a2be2; /* Purple color */
+}
+
+.historySection {
+  padding: 0 8px;
+}
+
+.historyTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historyItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #2c2c3a;
+}
+
+.historyItem:last-child {
+  border-bottom: none;
+}
+
+.historyIcon {
+  font-size: 16px;
+  color: #b0b0c0;
+  margin-right: 16px;
+}
+
+.historyDate {
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.historyEstablishment {
+  color: #b0b0c0;
+  font-size: 0.9rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, #1a1a2e, transparent);
+}
+
+.actionButton {
+  width: 100%;
+  padding: 16px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 111, 97, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.actionButton:hover {
+  background-color: #ff8a7d;
+}

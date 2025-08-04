@@ -1,0 +1,52 @@
+.container {
+  background-color: #1a1a2e;
+  padding: 16px;
+  min-height: 100vh;
+  max-width: 420px; /* Mantém a consistência com a tela de cartões */
+  margin: 0 auto;
+}
+
+.header {
+  padding: 16px 0;
+  margin-bottom: 24px;
+}
+
+.greeting {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #b0b0c0;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.carousel {
+  width: 100%;
+  height: auto;
+}
+
+.slideBanner {
+  width: 85%;
+  max-width: 320px;
+}
+
+.slideStore {
+  width: 40%;
+  max-width: 140px;
+}

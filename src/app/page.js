@@ -1,95 +1,69 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import CampaignBanner from '@/components/CampaignBanner';
+import StoreCard from '@/components/StoreCard';
+import styles from './HomePage.module.css';
+
+const fakeCampaigns = [
+  { id: 1, title: 'Descontos de Inverno', description: 'Até 50% OFF em lojas selecionadas.', color: '#4a90e2' },
+  { id: 2, title: 'Festival de Café', description: 'Compre um, leve outro grátis.', color: '#d0021b' },
+  { id: 3, title: 'Semana do Hambúrguer', description: 'Combos a partir de R$19,90.', color: '#f5a623' },
+];
+
+const fakeStores = [
+  { id: 1, name: 'Barbearia do Zé', category: 'Beleza' },
+  { id: 2, name: 'Oficina do Bira', category: 'Automotivo' },
+  { id: 3, name: 'Açaí da Praça', category: 'Alimentação' },
+  { id: 4, name: 'Padaria Pão Quente', category: 'Alimentação' },
+  { id: 5, name: 'PetShop Miau', category: 'Pets' },
+  { id: 6, name: 'Lava Rápido Clean', category: 'Automotivo' },
+];
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.greeting}>Olá!</h1>
+        <p className={styles.subtitle}>Descubra as melhores recompensas</p>
+      </header>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Campanhas em Destaque</h2>
+        <Swiper spaceBetween={16} slidesPerView={'auto'} className={styles.carousel}>
+          {fakeCampaigns.map((campaign) => (
+            <SwiperSlide key={campaign.id} className={styles.slideBanner}>
+              <CampaignBanner campaign={campaign} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Lojas Populares</h2>
+        <Swiper spaceBetween={16} slidesPerView={'auto'} className={styles.carousel}>
+          {fakeStores.map((store) => (
+            <SwiperSlide key={store.id} className={styles.slideStore}>
+              <StoreCard store={store} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Novidades</h2>
+        <Swiper spaceBetween={16} slidesPerView={'auto'} className={styles.carousel}>
+          {[...fakeStores].reverse().map((store) => (
+            <SwiperSlide key={store.id} className={styles.slideStore}>
+              <StoreCard store={store} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
     </div>
   );
 }
+
